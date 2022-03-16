@@ -7,7 +7,6 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "@types/formidable": "^1.2.4",
     "@types/underscore": "^1.11.3",
     "aws-sdk": "^2.924.0",
     "bcrypt-nodejs": "0.0.3",
@@ -17,6 +16,7 @@
     "express": "^4.17.1",
     "fcm-node": "^1.6.1",
     "flutterwave-node-v3": "^1.0.8",
+    "formidable": "^1.2.4",
     "interswitch": "^2.1.7",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.1.0",
