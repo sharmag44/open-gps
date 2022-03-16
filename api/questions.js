@@ -1,6 +1,5 @@
 'use strict';
 const model = 'question';
-
 let mapper = require(`../mappers/${model}`);
 const updationScheme = require('../helpers/updateEntities');
 const { baseServices } = require('../services');

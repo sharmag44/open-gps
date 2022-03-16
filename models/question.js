@@ -12,12 +12,13 @@ module.exports = () => {
                allowNull: true,
                defaultValue: null,
           },
-          isAttachmentRequired: {
-               type: Sequelize.BOOLEAN,
-               defaultValue: false,
-          },
           answer: {
                type: Sequelize.TEXT('long'),
+               allowNull: true,
+               defaultValue: null,
+          },
+          file: {
+               type: Sequelize.STRING,
                allowNull: true,
                defaultValue: null,
           },

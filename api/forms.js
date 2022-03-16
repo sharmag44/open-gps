@@ -9,10 +9,13 @@ const question = require('../models/question');
 
 exports.create = async (req, res) => {
      try {
-          const { title } = req.body;
+          const { title, questions } = req.body;
+          baseServices.IfExists(questions, 'questions');
           baseServices.IfExists(title, 'title');
           const createdModel = await db[model].create(req.body);
-
+          await db.question.bulkCreate(
+               questions.map((i) => ({ ...i, formId: createdModel.id }))
+          );
           return res.data(mapper.toModel(createdModel));
      } catch (error) {
           res.failure(error);
